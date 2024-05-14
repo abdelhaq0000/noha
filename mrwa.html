@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noha and Marwa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: headerAnimation 2s ease-in-out infinite alternate;
+        }
+        @keyframes headerAnimation {
+            from { background-color: #ff1493; }
+            to { background-color: #ff69b4; }
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 2.5em;
+            margin-top: 20px;
+            animation: textAnimation 2s ease-in-out infinite alternate;
+        }
+        @keyframes textAnimation {
+            from { opacity: 0.5; transform: scale(1); }
+            to { opacity: 1; transform: scale(1.1); }
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #ff1493;
+            animation: fadeIn 3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .names {
+            font-size: 2em;
+            color: #ff69b4;
+            animation: namesAnimation 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes namesAnimation {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Noha and Marwa</h1>
+</header>
+
+<main>
+    <div class="names">Noha and Marwa</div>
+    <p>are the greatest public speakers.</p>
+</main>
+
+</body>
+</html>
