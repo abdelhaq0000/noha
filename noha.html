@@ -3,68 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noha and Marwa</title>
+    <title>Abdelhaq El Metlini - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
-            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
         header {
-            background-color: #ff69b4;
-            color: white;
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77a6f7 3px solid;
+            animation: fadeInDown 2s;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .banner {
+            padding: 60px 0;
+            background: #e4e4e4;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            animation: bounceIn 2s;
+        }
+        section {
+            padding: 20px 0;
+            animation: fadeInUp 2s;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content .main,
+        .content .sidebar {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content .main {
+            flex: 3;
+            background: #fff;
+        }
+        .content .sidebar {
+            flex: 1;
+            background: #f4f4f4;
+        }
+        footer {
             padding: 20px;
             text-align: center;
-            animation: headerAnimation 2s ease-in-out infinite alternate;
+            background: #333;
+            color: #fff;
+            animation: fadeIn 2s;
         }
-        @keyframes headerAnimation {
-            from { background-color: #ff1493; }
-            to { background-color: #ff69b4; }
+        .fadeInDown {
+            animation: fadeInDown 2s;
         }
-        h1 {
-            color: #ff69b4;
-            font-size: 2.5em;
-            margin-top: 20px;
-            animation: textAnimation 2s ease-in-out infinite alternate;
-        }
-        @keyframes textAnimation {
-            from { opacity: 0.5; transform: scale(1); }
-            to { opacity: 1; transform: scale(1.1); }
-        }
-        p {
-            font-size: 1.2em;
-            margin-top: 20px;
-            color: #ff1493;
-            animation: fadeIn 3s ease-in;
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-        .names {
-            font-size: 2em;
-            color: #ff69b4;
-            animation: namesAnimation 1.5s ease-in-out infinite alternate;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        @keyframes namesAnimation {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
+        @keyframes bounceIn {
+            from, 20%, 40%, 60%, 80%, to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            0% {
+                opacity: 0;
+                transform: scale3d(.3, .3, .3);
+            }
+            20% {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            40% {
+                transform: scale3d(.9, .9, .9);
+            }
+            60% {
+                opacity: 1;
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+            80% {
+                transform: scale3d(.97, .97, .97);
+            }
+            to {
+                opacity: 1;
+                transform: scale3d(1, 1, 1);
+            }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Noha and Marwa</h1>
-</header>
-
-<main>
-    <div class="names">Noha and Marwa</div>
-    <p>are the greatest public speakers.</p>
-</main>
-
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Abdelhaq El Metlini</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#volunteering">Volunteering</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <img src="profil.png" alt="Abdelhaq El Metlini" class="profile-img">
+        </div>
+    </section>
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>I'm a motivated person with a Master's in Computer Engineering from the Faculty of Sciences in Oujda. I love learning new things and facing challenges. At the American Language Centre, I've improved how I talk with people. Also, I've been in the Public Speaking Toastmasters Program to get better at speaking. I really enjoy sports and traveling, always eager for new adventures.</p>
+    </section>
+    <section id="education" class="container">
+        <h2>Education and Training</h2>
+        <ul>
+            <li>
+                <strong>Master's in Computer Engineering</strong><br>
+                University Mohammed Premier, Oujda, Morocco<br>
+                10/10/2022 – 10/10/2024
+            </li>
+            <li>
+                <strong>Bachelor's degree in Mathematics and Computer Science</strong><br>
+                University Mohammed Premier, Oujda, Morocco<br>
+                10/10/2019 – 10/06/2022
+            </li>
+            <li>
+                <strong>High School Diploma in Mathematics (Stream A)</strong><br>
+                Zineb Nafzaouia High School, Oujda, Morocco<br>
+                16/09/2018 – 10/06/2019
+            </li>
+        </ul>
+    </section>
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>Microsoft Office</li>
+            <li>Good programming skills (C, Python, Java, C++)</li>
+            <li>Application programming and Artificial Intelligence (Machine Learning/Neural Network)</li>
+            <li>Strong knowledge of CI/CD tools (DevOps)</li>
+            <li>Git</li>
+            <li>Jenkins, Maven, Git, Docker</li>
+            <li>Linux (Terminal Commands, Bash/Shell)</li>
+            <li>Frameworks: Spring, Spring Boot, React Framework</li>
+            <li>Python (Tensorflow, Keras, and Pytorch)</li>
+        </ul>
+    </section>
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Image compression using autoencoders</strong><br>
+                Leveraging both GPU and CPU resources, I developed a CNN model capable of efficiently compressing and decompressing images.<br>
+                [16/04/2024 – Current]
+            </li>
+            <li>
+                <strong>Web Project: E-learning web apps</strong><br>
+                This project is all about making it easy for students to learn English online. They can sign up, take courses, and do quizzes to check what they've learned.<br>
+                [14/02/2023 – 16/04/2023]
+            </li>
+            <li>
+                <strong>POS tagging application</strong><br>
+                POS tagging application capable of categorizing each word in a sentence into its respective grammatical category, such as noun, verb, adjective.<br>
+                [08/03/2023 – 09/06/2023]
+            </li>
+        </ul>
+    </section>
+    <section id="volunteering" class="container">
+        <h2>Volunteering</h2>
+        <ul>
+            <li>
+                <strong>Halloween event</strong><br>
+                American Language Centre<br>
+                [30/10/2023 – 31/10/2023]<br>
+                <a href="https://www.linkedin.com/posts/abdelhaq-el-metlini-53a99725a_halloweenfun-communityengagement-leadership-activity-7125415309657665536-uaDX?utm_source=share&utm_medium=member_desktop" target="_blank">View Event</a>
+            </li>
+            <li>
+                <strong>Field day</strong><br>
+                American Language Centre<br>
+                [16/01/2024 – 16/01/2024]<br>
+                <a href="https://www.linkedin.com/posts/abdelhaq-el-metlini-53a99725a_leader-job-language-activity-7060961681627041792-A-q-?utm_source=share&utm_medium=member_desktop" target="_blank">View Event</a>
+            </li>
+            <li>
+                <strong>Meet our laureates event</strong><br>
+                University Mohammed First<br>
+                [16/02/2024 – 16/02/2024]<br>
+                <a href="https://www.linkedin.com/posts/abdelhaq-el-metlini-53a99725a_m2ievent-alumniwisdom-gratitude-activity-7145169129153470464-aOeZ?utm_source=share&utm_medium=member_desktop" target="_blank">View Event</a>
+            </li>
+        </ul>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>
+            <strong>Phone:</strong> (+212) 708019028<br>
+            <strong>Email:</strong> abdelhaq.elmetlini@ump.ac.ma<br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdelhaq-el-metlini-53a99725a/" target="_blank">LinkedIn Profile</a><br>
+            <strong>Address:</strong> HAY BEN LMRAH, 64100 Oujda, Morocco
+        </p>
+    </section>
+    <footer>
+        <p>Abdelhaq El Metlini &copy; 2024</p>
+    </footer>
 </body>
 </html>
